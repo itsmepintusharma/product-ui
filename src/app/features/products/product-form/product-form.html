@@ -1,0 +1,71 @@
+<app-navbar></app-navbar>
+<div class="container mt-4">
+
+    <div class="card">
+
+        <div class="card-header">
+
+            <h3>
+                {{ isEditMode ? 'Edit Product' : 'Create Product' }}
+            </h3>
+
+        </div>
+
+        <div class="card-body">
+
+            <div class="mb-3">
+
+                <label>Name</label>
+
+                <input
+                    class="form-control"
+                    [(ngModel)]="name">
+
+            </div>
+
+            <div class="mb-3">
+
+                <label>Description</label>
+
+                <textarea
+                    class="form-control"
+                    [(ngModel)]="description">
+                </textarea>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label>Price</label>
+
+                <input
+                    type="number"
+                    class="form-control"
+                    [(ngModel)]="price">
+
+            </div>
+
+            <div class="mb-3">
+
+                <label>Stock</label>
+
+                <input
+                    type="number"
+                    class="form-control"
+                    [(ngModel)]="stock">
+
+            </div>
+
+            <button
+                class="btn btn-success"
+                (click)="save()">
+
+                {{ isEditMode ? 'Update Product' : 'Save Product' }}
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
